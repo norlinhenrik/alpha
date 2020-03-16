@@ -7,7 +7,7 @@
     'depends': [
         'calendar',
         # 'calendar_resource',
-        'sale',
+        'sale_management',
         # 'sale_product_pack',
     ],
 
@@ -17,7 +17,7 @@
 
     'description': """
         USAGE
-        On Sale Order, add (1) From date (2) To date (3) Order Line with a product.
+        On Sale Order, add (1) Customer (2) From date (3) To date (4) Order Line with a product.
         Click button to Schedule Events (top right corner in the sheet).
     """
 }

@@ -21,6 +21,7 @@ class SaleOrderLine(models.Model):
                             (4, record.partner_id.id),
                         ],
                     })
+        return self.env.ref('calendar.action_calendar_event').read()[0]
 
 
 class CalendarEvent(models.Model):
