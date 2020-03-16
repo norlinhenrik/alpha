@@ -1,0 +1,38 @@
+<odoo>
+    <data>
+
+        <record id="view_calendar_event_form" model="ir.ui.view">
+            <field name="name">calendar.event.form (scheduling)</field>
+            <field name="model">calendar.event</field>
+            <field name="inherit_id" ref="calendar.view_calendar_event_form" />
+            <field name="arch" type="xml">
+                <field name="categ_ids" position="after">
+                    <field name="product_id"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="view_order_form" model="ir.ui.view">
+            <field name="name">sale.order.form (scheduling)</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form" />
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//div[@name='button_box']" position="inside">
+                        <button name="create_calendar_events" type="object" class="oe_stat_button" icon="fa-calendar icon">
+                            <div class="o_field_widget o_stat_info">
+                                <span class="o_stat_text">Schedule</span>
+                                <span class="o_stat_text">Events</span>
+                            </div>
+                        </button>
+                    </xpath>
+                    <field name="payment_term_id" position="after">
+                        <field name="from_datetime"/>
+                        <field name="to_datetime"/>
+                    </field>
+                </data>
+            </field>
+        </record>
+
+    </data>
+</odoo>
